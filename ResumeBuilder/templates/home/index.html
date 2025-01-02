@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>Build Your Professional Resume Effortlessly</h1>
+        <p>Create stunning resumes in just a few clicks with our easy-to-use platform.</p>
+        <a href="{% url 'choose_template' %}" class="btn btn-primary">Get Started</a>
+
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features" id="features">
+    <div class="container">
+        <h2>Features</h2>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <i class="bi bi-layout-text-window-reverse fs-1 text-primary mb-3"></i>
+                    <h5>Custom Templates</h5>
+                    <p>Choose from a variety of modern and customizable resume templates.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <i class="bi bi-robot fs-1 text-primary mb-3"></i>
+                    <h5>AI Suggestions</h5>
+                    <p>Get smart suggestions to improve your resume and stand out.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <i class="bi bi-cloud-arrow-down fs-1 text-primary mb-3"></i>
+                    <h5>Download as PDF</h5>
+                    <p>Export your resume as a high-quality PDF file instantly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+{% endblock content %}

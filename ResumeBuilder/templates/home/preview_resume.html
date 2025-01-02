@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">{{ resume.full_name }}</h1>
+
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <p><strong>Email:</strong> {{ resume.email }}</p>
+        </div>
+        <div class="col-md-6">
+            <p><strong>Phone:</strong> {{ resume.phone }}</p>
+        </div>
+    </div>
+
+    <div class="mb-4">
+        <h2 class="text-primary">Education</h2>
+        <p>{{ resume.education }}</p>
+    </div>
+
+    <div class="mb-4">
+        <h2 class="text-primary">Experience</h2>
+        <p>{{ resume.experience }}</p>
+    </div>
+
+    <div class="mb-4">
+        <h2 class="text-primary">Skills</h2>
+        <p>{{ resume.skills }}</p>
+    </div>
+
+    <div class="mb-4">
+        <h2 class="text-primary">Summary</h2>
+        <p>{{ resume.summary }}</p>
+    </div>
+
+    <div class="text-center">
+        <a href="{% url 'download_resume' resume.id %}" class="btn btn-success btn-lg">Download PDF</a>
+    </div>
+</div>
+{% endblock content %}
